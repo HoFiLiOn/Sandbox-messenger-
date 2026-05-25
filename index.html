@@ -38,31 +38,15 @@
         .welcome-screen.hidden {
             display: none;
         }
-        .welcome-logo {
-            font-size: 64px;
-            margin-bottom: 24px;
-        }
-        .welcome-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-        .welcome-text {
-            font-size: 16px;
-            color: #64748b;
-            margin-bottom: 32px;
-            max-width: 280px;
-        }
+        .welcome-logo { font-size: 64px; margin-bottom: 24px; }
+        .welcome-title { font-size: 28px; font-weight: 700; margin-bottom: 16px; }
+        .welcome-text { font-size: 16px; color: #64748b; margin-bottom: 32px; max-width: 280px; }
         .welcome-btn {
-            background: #3b82f6;
-            color: white;
-            border: none;
-            padding: 14px 32px;
-            border-radius: 40px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
+            background: #3b82f6; color: white; border: none;
+            padding: 14px 32px; border-radius: 40px; font-size: 16px;
+            font-weight: 600; cursor: pointer; transition: 0.1s;
         }
+        .welcome-btn:active { transform: scale(0.97); }
         /* Основной интерфейс */
         .app {
             display: flex;
@@ -81,341 +65,182 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logo {
-            font-weight: 700;
-            font-size: 20px;
-        }
+        .logo { font-weight: 700; font-size: 20px; }
         .icon-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: none; border: none; cursor: pointer;
+            padding: 8px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
             transition: background 0.2s;
         }
-        .icon-btn:hover {
-            background: #f1f5f9;
-        }
-        .search-bar {
-            padding: 10px 16px;
-            background: #ffffff;
-            border-bottom: 1px solid #e2e8f0;
-        }
+        .icon-btn:hover { background: #f1f5f9; }
+        .search-bar { padding: 10px 16px; background: #ffffff; border-bottom: 1px solid #e2e8f0; }
         .search-bar input {
-            width: 100%;
-            padding: 10px 16px;
-            border-radius: 30px;
-            border: 1px solid #e2e8f0;
-            background: #f8fafc;
-            font-size: 14px;
+            width: 100%; padding: 10px 16px; border-radius: 30px;
+            border: 1px solid #e2e8f0; background: #f8fafc;
+            font-size: 14px; transition: 0.2s;
         }
-        .content {
-            flex: 1;
-            overflow-y: auto;
-        }
-        .tab-pane {
-            display: none;
-        }
-        .tab-pane.active {
-            display: block;
-        }
+        .search-bar input:focus { outline: none; border-color: #3b82f6; }
+        .content { flex: 1; overflow-y: auto; }
+        .tab-pane { display: none; }
+        .tab-pane.active { display: block; }
         .list-item {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 12px 16px;
-            background: #ffffff;
-            border-bottom: 1px solid #f1f5f9;
-            cursor: pointer;
+            display: flex; align-items: center; gap: 14px;
+            padding: 12px 16px; background: #ffffff;
+            border-bottom: 1px solid #f1f5f9; cursor: pointer;
             transition: background 0.1s;
         }
-        .list-item:hover {
-            background: #f8fafc;
-        }
+        .list-item:hover { background: #f8fafc; }
         .avatar {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            background: #3b82f6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 20px;
-            color: white;
-            flex-shrink: 0;
-            background-size: cover;
+            width: 52px; height: 52px; border-radius: 50%;
+            background: #3b82f6; display: flex; align-items: center;
+            justify-content: center; font-weight: 600; font-size: 20px;
+            color: white; flex-shrink: 0; background-size: cover;
             background-position: center;
         }
-        .list-info {
-            flex: 1;
-            min-width: 0;
-        }
-        .list-name {
-            font-weight: 600;
-            margin-bottom: 4px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .list-preview {
-            font-size: 13px;
-            color: #64748b;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+        .list-info { flex: 1; min-width: 0; }
+        .list-name { font-weight: 600; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+        .list-preview { font-size: 13px; color: #64748b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .bottom-nav {
-            display: flex;
-            background: #ffffff;
-            border-top: 1px solid #e2e8f0;
-            padding: 8px 16px;
-            justify-content: space-around;
+            display: flex; background: #ffffff; border-top: 1px solid #e2e8f0;
+            padding: 8px 16px; justify-content: space-around;
         }
         .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: #94a3b8;
-            font-size: 12px;
-            transition: color 0.2s;
+            display: flex; flex-direction: column; align-items: center;
+            gap: 4px; background: none; border: none; cursor: pointer;
+            color: #94a3b8; font-size: 12px; transition: color 0.2s;
         }
-        .nav-item.active {
-            color: #3b82f6;
-        }
+        .nav-item.active { color: #3b82f6; }
+        .nav-item svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 2; }
+        /* Чат окно */
         .chat-window {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #ffffff;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            transform: translateX(100%);
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: #ffffff; z-index: 1000; display: flex;
+            flex-direction: column; transform: translateX(100%);
             transition: transform 0.2s ease-out;
         }
-        .chat-window.open {
-            transform: translateX(0);
-        }
+        .chat-window.open { transform: translateX(0); }
         .chat-header {
-            padding: 14px 16px;
-            background: #ffffff;
+            padding: 14px 16px; background: #ffffff;
             border-bottom: 1px solid #e2e8f0;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            display: flex; align-items: center; gap: 12px;
         }
         .messages-area {
-            flex: 1;
-            overflow-y: auto;
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            flex: 1; overflow-y: auto; padding: 12px;
+            display: flex; flex-direction: column; gap: 8px;
         }
         .message-wrapper {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            display: flex; align-items: flex-start; gap: 8px;
         }
-        .message-wrapper.own {
-            flex-direction: row-reverse;
-        }
+        .message-wrapper.own { flex-direction: row-reverse; }
         .message-avatar {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: #e2e8f0;
-            flex-shrink: 0;
-            background-size: cover;
+            width: 28px; height: 28px; border-radius: 50%;
+            background: #e2e8f0; flex-shrink: 0; background-size: cover;
         }
         .message-bubble {
-            max-width: 70%;
-            background: #f1f5f9;
-            border-radius: 18px;
-            padding: 8px 14px;
+            max-width: 75%; background: #f1f5f9;
+            border-radius: 18px; padding: 6px 12px;
         }
         .message-wrapper.own .message-bubble {
-            background: #3b82f6;
-            color: white;
+            background: #3b82f6; color: white;
         }
-        .message-text {
-            font-size: 15px;
-            word-break: break-word;
-        }
+        .message-text { font-size: 14px; word-break: break-word; }
         .message-meta {
-            font-size: 10px;
-            color: #64748b;
-            margin-top: 4px;
+            font-size: 9px; color: #64748b; margin-top: 2px;
             text-align: right;
         }
         .input-area {
-            padding: 12px;
-            background: #ffffff;
-            border-top: 1px solid #e2e8f0;
-            display: flex;
-            gap: 12px;
+            padding: 10px 12px; background: #ffffff;
+            border-top: 1px solid #e2e8f0; display: flex; gap: 10px;
         }
         .input-area input {
-            flex: 1;
-            padding: 10px 16px;
-            border-radius: 30px;
-            border: 1px solid #e2e8f0;
-            background: #f8fafc;
+            flex: 1; padding: 10px 16px; border-radius: 30px;
+            border: 1px solid #e2e8f0; background: #f8fafc;
+            font-size: 14px;
         }
+        .input-area input:focus { outline: none; border-color: #3b82f6; }
+        /* Посты в каналах */
         .post {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 16px;
-            margin-bottom: 12px;
-            border: 1px solid #e2e8f0;
+            background: #ffffff; border-radius: 16px; padding: 14px;
+            margin-bottom: 12px; border: 1px solid #e2e8f0;
         }
         .post-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
+            display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
         }
         .post-avatar {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: #3b82f6;
-            background-size: cover;
+            width: 40px; height: 40px; border-radius: 50%;
+            background: #3b82f6; background-size: cover;
         }
-        .post-name {
-            font-weight: 600;
-        }
-        .post-date {
-            font-size: 11px;
-            color: #64748b;
-        }
+        .post-name { font-weight: 600; font-size: 15px; }
+        .post-date { font-size: 11px; color: #64748b; }
         .post-text {
-            font-size: 15px;
-            line-height: 1.5;
-            margin-bottom: 12px;
+            font-size: 14px; line-height: 1.5; margin-bottom: 10px;
             word-break: break-word;
         }
         .post-text.long {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+            display: -webkit-box; -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical; overflow: hidden;
         }
         .read-more {
-            color: #3b82f6;
-            font-size: 13px;
-            cursor: pointer;
-            margin-bottom: 8px;
-            display: inline-block;
+            color: #3b82f6; font-size: 12px; cursor: pointer;
+            margin-bottom: 8px; display: inline-block;
         }
         .post-stats {
-            font-size: 12px;
-            color: #64748b;
-            display: flex;
-            gap: 16px;
+            font-size: 12px; color: #64748b;
+            display: flex; gap: 16px; align-items: center;
         }
         .reaction-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            font-size: 14px;
-            padding: 4px 8px;
-            border-radius: 30px;
-            background: #f1f5f9;
+            background: none; border: none; cursor: pointer;
+            display: inline-flex; align-items: center; gap: 4px;
+            font-size: 13px; padding: 4px 10px; border-radius: 30px;
+            background: #f1f5f9; transition: 0.1s;
         }
+        .reaction-btn:active { transform: scale(0.96); }
         .fab {
-            margin: 12px 16px;
-            background: #3b82f6;
-            border: none;
-            padding: 12px;
-            border-radius: 30px;
-            color: white;
-            font-weight: 600;
-            width: calc(100% - 32px);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            margin: 12px 16px; background: #3b82f6; border: none;
+            padding: 12px; border-radius: 40px; color: white;
+            font-weight: 600; width: calc(100% - 32px);
+            cursor: pointer; display: flex; align-items: center;
+            justify-content: center; gap: 8px; transition: 0.1s;
         }
+        .fab:active { transform: scale(0.98); }
         .profile-avatar-large {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: #3b82f6;
-            margin: 20px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            color: white;
-            background-size: cover;
+            width: 100px; height: 100px; border-radius: 50%;
+            background: #3b82f6; margin: 20px auto;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 40px; color: white; background-size: cover;
         }
         .profile-field {
-            padding: 12px 16px;
-            border-bottom: 1px solid #e2e8f0;
-            display: flex;
-            justify-content: space-between;
+            padding: 12px 16px; border-bottom: 1px solid #e2e8f0;
+            display: flex; justify-content: space-between;
         }
         .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
-            backdrop-filter: blur(4px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-            visibility: hidden;
-            opacity: 0;
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 2000; visibility: hidden; opacity: 0;
             transition: 0.2s;
         }
-        .modal.active {
-            visibility: visible;
-            opacity: 1;
-        }
+        .modal.active { visibility: visible; opacity: 1; }
         .modal-content {
-            background: #ffffff;
-            border-radius: 28px;
-            padding: 24px;
-            width: 90%;
-            max-width: 400px;
+            background: #ffffff; border-radius: 28px; padding: 24px;
+            width: 90%; max-width: 400px;
         }
         .modal-content input, .modal-content textarea, .modal-content select {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 16px;
-            border-radius: 16px;
-            border: 1px solid #e2e8f0;
+            width: 100%; padding: 12px; margin-bottom: 16px;
+            border-radius: 16px; border: 1px solid #e2e8f0;
         }
         .toast {
-            position: fixed;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #1e293b;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 40px;
-            font-size: 14px;
-            z-index: 3000;
+            position: fixed; bottom: 80px; left: 50%;
+            transform: translateX(-50%); background: #1e293b;
+            color: white; padding: 8px 20px; border-radius: 40px;
+            font-size: 14px; z-index: 3000;
         }
+        .admin-card {
+            background: #ffffff; margin: 12px; padding: 16px;
+            border-radius: 20px; border: 1px solid #e2e8f0;
+        }
+        .admin-title { font-weight: 700; margin-bottom: 12px; font-size: 18px; }
+        .admin-stat { display: flex; justify-content: space-between; margin-bottom: 8px; }
     </style>
 </head>
 <body>
@@ -447,10 +272,8 @@
     let unsubscribeChat = null;
     let unsubscribePosts = null;
 
-    // Приветственный экран + вход через Google
     function showWelcome() {
-        const root = document.getElementById('root');
-        root.innerHTML = `
+        document.getElementById('root').innerHTML = `
             <div class="welcome-screen" id="welcomeScreen">
                 <div class="welcome-logo">📦</div>
                 <div class="welcome-title">Sandbox Messenger</div>
@@ -458,13 +281,10 @@
                 <button class="welcome-btn" id="startBtn">Продолжить</button>
             </div>
         `;
-        document.getElementById('startBtn').onclick = () => {
-            signInWithPopup(auth, provider).catch(console.error);
-        };
+        document.getElementById('startBtn').onclick = () => signInWithPopup(auth, provider);
     }
 
     async function initApp() {
-        // Создаём/обновляем пользователя в Firestore
         const userRef = doc(db, 'users', currentUser.uid);
         const userSnap = await getDoc(userRef);
         if (!userSnap.exists()) {
@@ -477,7 +297,6 @@
                 createdAt: serverTimestamp()
             });
         } else {
-            // Обновим имя и аватар если изменились
             await updateDoc(userRef, {
                 name: currentUser.displayName || currentUser.email.split('@')[0],
                 avatar: currentUser.photoURL || ''
@@ -487,27 +306,24 @@
     }
 
     async function renderMainApp() {
-        const root = document.getElementById('root');
-        root.innerHTML = `
+        document.getElementById('root').innerHTML = `
             <div class="app">
                 <div class="header">
                     <div class="logo">📦 Sandbox</div>
-                    <button class="icon-btn" id="logoutBtn">🚪</button>
+                    <button class="icon-btn" id="logoutBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></button>
                 </div>
                 <div class="search-bar"><input type="text" id="globalSearch" placeholder="Поиск..."></div>
                 <div class="content">
                     <div class="tab-pane active" id="chatsPane"><div id="chatsList"></div></div>
                     <div class="tab-pane" id="contactsPane"><div id="contactsList"></div></div>
-                    <div class="tab-pane" id="channelsPane"><div id="channelsList"></div></div>
                     <div class="tab-pane" id="profilePane"><div id="profileContent"></div></div>
                     ${currentUser.email === 'hofilionclkc@gmail.com' ? `<div class="tab-pane" id="adminPane"><div id="adminContent"></div></div>` : ''}
                 </div>
                 <div class="bottom-nav">
-                    <button class="nav-item active" data-tab="chats"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Чаты</span></button>
-                    <button class="nav-item" data-tab="contacts"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Контакты</span></button>
-                    <button class="nav-item" data-tab="channels"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg><span>Каналы</span></button>
-                    <button class="nav-item" data-tab="profile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Профиль</span></button>
-                    ${currentUser.email === 'hofilionclkc@gmail.com' ? `<button class="nav-item" data-tab="admin"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M1 12h22"/><circle cx="12" cy="12" r="3"/></svg><span>Админка</span></button>` : ''}
+                    <button class="nav-item active" data-tab="chats"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Чаты</span></button>
+                    <button class="nav-item" data-tab="contacts"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Контакты</span></button>
+                    <button class="nav-item" data-tab="profile"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Профиль</span></button>
+                    ${currentUser.email === 'hofilionclkc@gmail.com' ? `<button class="nav-item" data-tab="admin"><svg viewBox="0 0 24 24"><path d="M12 1v22M1 12h22"/><circle cx="12" cy="12" r="3"/></svg><span>Админка</span></button>` : ''}
                 </div>
             </div>
         `;
@@ -521,7 +337,6 @@
                 btn.classList.add('active');
                 if (tab === 'chats') loadChats();
                 if (tab === 'contacts') loadContacts();
-                if (tab === 'channels') loadChannels();
                 if (tab === 'profile') loadProfile();
                 if (tab === 'admin') loadAdmin();
             });
@@ -540,87 +355,35 @@
     // ========== ЛИЧНЫЕ ЧАТЫ ==========
     async function loadChats() {
         const container = document.getElementById('chatsList');
-        // Ищем все приватные чаты, где участвует текущий пользователь
         const q = query(collection(db, 'chats'), where('participants', 'array-contains', currentUser.uid));
         const snapshot = await getDocs(q);
         const chats = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
         if (!chats.length) {
-            container.innerHTML = '<div style="padding:20px;text-align:center;">Нет чатов</div><button class="fab" id="newChatFab">+ Новый чат</button>';
-            document.getElementById('newChatFab')?.addEventListener('click', () => showNewChatModal());
+            container.innerHTML = '<div style="padding:20px;text-align:center;">Нет чатов</div><button class="fab" id="newChatFab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> Новый чат или канал</button>';
+            document.getElementById('newChatFab')?.addEventListener('click', () => showCreateMenu());
             return;
         }
         let html = '';
         for (let chat of chats) {
             const otherId = chat.participants.find(p => p !== currentUser.uid);
-            let otherUser = null;
-            let name = 'Чат';
-            let avatar = '';
+            let name = 'Чат', avatar = '';
             if (otherId) {
                 const userDoc = await getDoc(doc(db, 'users', otherId));
-                otherUser = userDoc.data();
+                const otherUser = userDoc.data();
                 name = otherUser?.name || 'Unknown';
                 avatar = otherUser?.avatar || '';
             }
-            // последнее сообщение
             const lastMsgQuery = query(collection(db, 'messages'), where('chatId', '==', chat.id), orderBy('timestamp', 'desc'), limit(1));
             const lastMsgSnap = await getDocs(lastMsgQuery);
             const lastMsg = lastMsgSnap.docs[0]?.data()?.text || 'Нет сообщений';
-            html += `
-                <div class="list-item" data-chatid="${chat.id}">
-                    <div class="avatar" style="background-image: url('${avatar}');">${!avatar ? name.charAt(0) : ''}</div>
-                    <div class="list-info">
-                        <div class="list-name">${escapeHtml(name)}</div>
-                        <div class="list-preview">${escapeHtml(lastMsg)}</div>
-                    </div>
-                </div>
-            `;
+            html += `<div class="list-item" data-chatid="${chat.id}"><div class="avatar" style="background-image: url('${avatar}');">${!avatar ? name.charAt(0) : ''}</div><div class="list-info"><div class="list-name">${escapeHtml(name)}</div><div class="list-preview">${escapeHtml(lastMsg)}</div></div></div>`;
         }
         container.innerHTML = html;
-        container.insertAdjacentHTML('beforeend', '<button class="fab" id="newChatFab">+ Новый чат</button>');
-        document.getElementById('newChatFab')?.addEventListener('click', () => showNewChatModal());
+        container.insertAdjacentHTML('beforeend', '<button class="fab" id="newChatFab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> Новый чат или канал</button>');
+        document.getElementById('newChatFab')?.addEventListener('click', () => showCreateMenu());
         document.querySelectorAll('[data-chatid]').forEach(el => {
             el.addEventListener('click', () => openChat(el.dataset.chatid));
         });
-    }
-
-    async function showNewChatModal() {
-        const usersSnap = await getDocs(collection(db, 'users'));
-        const users = usersSnap.docs.map(d => ({ id: d.id, ...d.data() })).filter(u => u.id !== currentUser.uid);
-        const modal = document.createElement('div'); modal.className = 'modal active';
-        modal.innerHTML = `
-            <div class="modal-content">
-                <h3>Новый чат</h3>
-                <select id="contactSelect">
-                    <option value="">Выберите пользователя</option>
-                    ${users.map(u => `<option value="${u.id}">${escapeHtml(u.name)} (${u.email})</option>`).join('')}
-                </select>
-                <div style="display:flex; gap:12px; margin-top:16px;">
-                    <button id="confirmChat">Создать</button>
-                    <button id="cancelChat">Отмена</button>
-                </div>
-            </div>
-        `;
-        document.body.appendChild(modal);
-        document.getElementById('confirmChat').onclick = async () => {
-            const userId = document.getElementById('contactSelect').value;
-            if (!userId) return;
-            // Проверяем, существует ли уже чат
-            const q = query(collection(db, 'chats'), where('participants', 'array-contains', currentUser.uid));
-            const snap = await getDocs(q);
-            const exists = snap.docs.some(d => {
-                const data = d.data();
-                return data.type === 'private' && data.participants.includes(userId);
-            });
-            if (exists) { alert('Чат уже существует'); modal.remove(); return; }
-            const chatRef = await addDoc(collection(db, 'chats'), {
-                type: 'private',
-                participants: [currentUser.uid, userId],
-                createdAt: serverTimestamp()
-            });
-            modal.remove();
-            openChat(chatRef.id);
-        };
-        document.getElementById('cancelChat').onclick = () => modal.remove();
     }
 
     async function openChat(chatId) {
@@ -630,28 +393,15 @@
         const chatDoc = await getDoc(doc(db, 'chats', chatId));
         const chat = chatDoc.data();
         const otherId = chat.participants.find(p => p !== currentUser.uid);
-        let title = 'Чат';
-        let otherUser = null;
+        let title = 'Чат', otherUser = null;
         if (otherId) {
             const userDoc = await getDoc(doc(db, 'users', otherId));
             otherUser = userDoc.data();
             title = otherUser?.name || 'Чат';
         }
-        const win = document.createElement('div');
-        win.className = 'chat-window open';
-        win.innerHTML = `
-            <div class="chat-header">
-                <button class="icon-btn" id="closeChatWin">←</button>
-                <div style="font-weight:600;">${escapeHtml(title)}</div>
-            </div>
-            <div class="messages-area" id="chatMsgs"></div>
-            <div class="input-area">
-                <input type="text" id="msgInput" placeholder="Сообщение...">
-                <button class="icon-btn" id="sendMsgBtn">➤</button>
-            </div>
-        `;
+        const win = document.createElement('div'); win.className = 'chat-window open';
+        win.innerHTML = `<div class="chat-header"><button class="icon-btn" id="closeChatWin"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button><div style="font-weight:600;">${escapeHtml(title)}</div></div><div class="messages-area" id="chatMsgs"></div><div class="input-area"><input type="text" id="msgInput" placeholder="Сообщение..."><button class="icon-btn" id="sendMsgBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></div>`;
         document.body.appendChild(win);
-        // Подписка на сообщения
         const q = query(collection(db, 'messages'), where('chatId', '==', chatId), orderBy('timestamp', 'asc'));
         unsubscribeChat = onSnapshot(q, (snapshot) => {
             const msgs = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
@@ -669,15 +419,7 @@
         container.innerHTML = messages.map(m => {
             const isOwn = m.senderId === currentUser.uid;
             const user = isOwn ? currentUser : otherUser;
-            return `
-                <div class="message-wrapper ${isOwn ? 'own' : ''}">
-                    <div class="message-avatar" style="background-image: url('${user?.avatar || ''}');">${!user?.avatar ? (user?.name?.charAt(0) || '?') : ''}</div>
-                    <div class="message-bubble">
-                        <div class="message-text">${escapeHtml(m.text)}</div>
-                        <div class="message-meta">${new Date(m.timestamp?.toDate()).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}</div>
-                    </div>
-                </div>
-            `;
+            return `<div class="message-wrapper ${isOwn ? 'own' : ''}"><div class="message-avatar" style="background-image: url('${user?.avatar || ''}');">${!user?.avatar ? (user?.name?.charAt(0) || '?') : ''}</div><div class="message-bubble"><div class="message-text">${escapeHtml(m.text)}</div><div class="message-meta">${new Date(m.timestamp?.toDate()).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}</div></div></div>`;
         }).join('');
         container.scrollTop = container.scrollHeight;
     }
@@ -686,13 +428,7 @@
         const input = document.getElementById('msgInput');
         const text = input.value.trim();
         if (!text) return;
-        await addDoc(collection(db, 'messages'), {
-            chatId,
-            senderId: currentUser.uid,
-            senderName: currentUser.displayName,
-            text,
-            timestamp: serverTimestamp()
-        });
+        await addDoc(collection(db, 'messages'), { chatId, senderId: currentUser.uid, senderName: currentUser.displayName, text, timestamp: serverTimestamp() });
         input.value = '';
     }
 
@@ -701,19 +437,8 @@
         const usersSnap = await getDocs(collection(db, 'users'));
         const users = usersSnap.docs.map(d => ({ id: d.id, ...d.data() })).filter(u => u.id !== currentUser.uid);
         const container = document.getElementById('contactsList');
-        if (!users.length) {
-            container.innerHTML = '<div style="padding:20px;text-align:center;">Нет контактов</div>';
-            return;
-        }
-        container.innerHTML = users.map(u => `
-            <div class="list-item" data-userid="${u.id}">
-                <div class="avatar" style="background-image: url('${u.avatar || ''}');">${!u.avatar ? u.name.charAt(0) : ''}</div>
-                <div class="list-info">
-                    <div class="list-name">${escapeHtml(u.name)} ${u.isPremium ? '💎' : ''}</div>
-                    <div class="list-preview">${u.email}</div>
-                </div>
-            </div>
-        `).join('');
+        if (!users.length) { container.innerHTML = '<div style="padding:20px;text-align:center;">Нет контактов</div>'; return; }
+        container.innerHTML = users.map(u => `<div class="list-item" data-userid="${u.id}"><div class="avatar" style="background-image: url('${u.avatar || ''}');">${!u.avatar ? u.name.charAt(0) : ''}</div><div class="list-info"><div class="list-name">${escapeHtml(u.name)} ${u.isPremium ? '💎' : ''}</div><div class="list-preview">${u.email}</div></div></div>`).join('');
         document.querySelectorAll('[data-userid]').forEach(el => {
             el.addEventListener('click', () => startPrivateChat(el.dataset.userid));
         });
@@ -723,201 +448,50 @@
         const q = query(collection(db, 'chats'), where('participants', 'array-contains', currentUser.uid));
         const snap = await getDocs(q);
         let existing = null;
-        snap.forEach(d => {
-            const data = d.data();
-            if (data.type === 'private' && data.participants.includes(userId)) existing = d.id;
-        });
-        if (existing) {
-            openChat(existing);
-        } else {
-            const chatRef = await addDoc(collection(db, 'chats'), {
-                type: 'private',
-                participants: [currentUser.uid, userId],
-                createdAt: serverTimestamp()
-            });
+        snap.forEach(d => { if (d.data().type === 'private' && d.data().participants.includes(userId)) existing = d.id; });
+        if (existing) openChat(existing);
+        else {
+            const chatRef = await addDoc(collection(db, 'chats'), { type: 'private', participants: [currentUser.uid, userId], createdAt: serverTimestamp() });
             openChat(chatRef.id);
         }
     }
 
-    // ========== КАНАЛЫ ==========
-    async function loadChannels() {
-        const q = query(collection(db, 'channels'), orderBy('createdAt', 'desc'));
-        const snapshot = await getDocs(q);
-        const channels = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
-        const subsSnap = await getDocs(query(collection(db, 'subscriptions'), where('userId', '==', currentUser.uid)));
-        const mySubs = new Set(subsSnap.docs.map(d => d.data().channelId));
-        const myChannels = channels.filter(ch => ch.ownerId === currentUser.uid || mySubs.has(ch.id) || ch.isPublic);
-        const container = document.getElementById('channelsList');
-        if (!myChannels.length) {
-            container.innerHTML = '<div style="padding:20px;text-align:center;">Нет каналов</div><button class="fab" id="createChannelFab">+ Создать канал</button>';
-            document.getElementById('createChannelFab')?.addEventListener('click', showCreateChannelModal);
-            return;
-        }
-        container.innerHTML = myChannels.map(ch => `
-            <div class="list-item" data-channelid="${ch.id}">
-                <div class="avatar" style="background-image: url('${ch.avatar || ''}');">${!ch.avatar ? ch.name.charAt(0) : ''}</div>
-                <div class="list-info">
-                    <div class="list-name">${escapeHtml(ch.name)}</div>
-                    <div class="list-preview">${ch.subscribers?.length || 0} подписчиков</div>
-                </div>
-            </div>
-        `).join('');
-        container.insertAdjacentHTML('beforeend', '<button class="fab" id="createChannelFab">+ Создать канал</button>');
-        document.getElementById('createChannelFab')?.addEventListener('click', showCreateChannelModal);
-        document.querySelectorAll('[data-channelid]').forEach(el => {
-            el.addEventListener('click', () => openChannel(el.dataset.channelid));
+    // ========== КАНАЛЫ (создание через кнопку +) ==========
+    async function createChannel(name, desc, isPrivate, avatarBase64) {
+        await addDoc(collection(db, 'channels'), {
+            name, description: desc, isPrivate: isPrivate === 'private', isPublic: isPrivate !== 'private',
+            ownerId: currentUser.uid, subscribers: [currentUser.uid], avatar: avatarBase64 || '', createdAt: serverTimestamp()
         });
+        loadChats(); // обновляем список чатов (каналы отображаются там же)
     }
 
-    async function openChannel(channelId) {
-        if (unsubscribePosts) unsubscribePosts();
-        currentChannel = channelId;
-        currentChat = null;
-        const channelDoc = await getDoc(doc(db, 'channels', channelId));
-        const channel = channelDoc.data();
-        const isSub = await checkSubscription(channelId);
-        const win = document.createElement('div');
-        win.className = 'chat-window open';
-        win.innerHTML = `
-            <div class="chat-header">
-                <button class="icon-btn" id="closeChannelWin">←</button>
-                <div style="font-weight:600;">${escapeHtml(channel.name)}</div>
-                <button class="icon-btn" id="subChannelBtn">${isSub ? '🔔' : '🔕'}</button>
+    async function showCreateMenu() {
+        const modal = document.createElement('div'); modal.className = 'modal active';
+        modal.innerHTML = `
+            <div class="modal-content">
+                <h3>Создать</h3>
+                <button id="createPrivateChatBtn" class="fab" style="margin:0 0 12px 0; width:100%; background:#e2e8f0; color:#1e293b;">💬 Личный чат</button>
+                <button id="createNewChannelBtn" class="fab" style="margin:0; width:100%; background:#e2e8f0; color:#1e293b;">📢 Канал</button>
+                <button id="cancelCreateMenu" style="margin-top:16px; background:none; border:none; color:#94a3b8; cursor:pointer;">Отмена</button>
             </div>
-            <div class="messages-area" id="channelPosts"></div>
-            ${channel.ownerId === currentUser.uid ? `<div class="input-area"><input type="text" id="newPostInput" placeholder="Новый пост..."><button class="icon-btn" id="sendPostBtn">➤</button></div>` : ''}
         `;
-        document.body.appendChild(win);
-        // Подписка на посты
-        const q = query(collection(db, 'posts'), where('channelId', '==', channelId), orderBy('timestamp', 'asc'));
-        unsubscribePosts = onSnapshot(q, (snapshot) => {
-            const posts = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
-            renderPosts(posts, channel);
-        });
-        win.querySelector('#closeChannelWin').onclick = () => { win.remove(); if (unsubscribePosts) unsubscribePosts(); };
-        if (channel.ownerId === currentUser.uid) {
-            win.querySelector('#sendPostBtn').onclick = () => createPost(channelId);
-            win.querySelector('#newPostInput').addEventListener('keypress', e => { if(e.key === 'Enter') createPost(channelId); });
-        }
-        win.querySelector('#subChannelBtn').onclick = async () => {
-            await toggleSubscription(channelId);
-            const newSub = await checkSubscription(channelId);
-            win.querySelector('#subChannelBtn').innerHTML = newSub ? '🔔' : '🔕';
-            loadChannels();
+        document.body.appendChild(modal);
+        document.getElementById('createPrivateChatBtn').onclick = () => {
+            modal.remove();
+            const username = prompt('Введите логин пользователя (@...)');
+            if (username) {
+                const q = query(collection(db, 'users'), where('email', '==', username));
+                getDocs(q).then(snap => {
+                    if (snap.empty) alert('Пользователь не найден');
+                    else startPrivateChat(snap.docs[0].id);
+                });
+            }
         };
-    }
-
-    function renderPosts(posts, channel) {
-        const container = document.getElementById('channelPosts');
-        if (!container) return;
-        if (!posts.length) { container.innerHTML = '<div style="text-align:center;">Нет постов</div>'; return; }
-        container.innerHTML = posts.map(p => {
-            const isLong = p.text?.length > 150;
-            return `
-                <div class="post" data-postid="${p.id}">
-                    <div class="post-header">
-                        <div class="post-avatar" style="background-image: url('${channel.avatar || ''}');"></div>
-                        <div class="post-info">
-                            <div class="post-name">${escapeHtml(channel.name)}</div>
-                            <div class="post-date">${new Date(p.timestamp?.toDate()).toLocaleString()}</div>
-                        </div>
-                    </div>
-                    <div class="post-text ${isLong ? 'long' : ''}">${escapeHtml(p.text)}</div>
-                    ${isLong ? '<div class="read-more">Читать полностью</div>' : ''}
-                    <div class="post-stats">
-                        <button class="reaction-btn" data-reaction="like">👍 ${p.likes?.length || 0}</button>
-                        <button class="reaction-btn" data-reaction="dislike">👎 ${p.dislikes?.length || 0}</button>
-                        👁️ ${p.views || 0}
-                    </div>
-                </div>
-            `;
-        }).join('');
-        container.scrollTop = container.scrollHeight;
-        // Обработка "читать полностью"
-        document.querySelectorAll('.read-more').forEach(btn => {
-            btn.onclick = (e) => {
-                const postDiv = btn.closest('.post');
-                const textDiv = postDiv.querySelector('.post-text');
-                textDiv.classList.toggle('long');
-                btn.textContent = textDiv.classList.contains('long') ? 'Читать полностью' : 'Свернуть';
-            };
-        });
-        // Реакции
-        document.querySelectorAll('.reaction-btn').forEach(btn => {
-            btn.onclick = async (e) => {
-                const postDiv = btn.closest('.post');
-                const postId = postDiv.dataset.postid;
-                const type = btn.dataset.reaction;
-                await toggleReaction(postId, type);
-            };
-        });
-        // Увеличиваем просмотры (один раз за открытие)
-        incrementViews(posts);
-    }
-
-    async function toggleReaction(postId, type) {
-        const postRef = doc(db, 'posts', postId);
-        const postSnap = await getDoc(postRef);
-        const post = postSnap.data();
-        const likes = post.likes || [];
-        const dislikes = post.dislikes || [];
-        if (type === 'like') {
-            if (likes.includes(currentUser.uid)) {
-                await updateDoc(postRef, { likes: arrayRemove(currentUser.uid) });
-            } else {
-                await updateDoc(postRef, { likes: arrayUnion(currentUser.uid), dislikes: arrayRemove(currentUser.uid) });
-            }
-        } else {
-            if (dislikes.includes(currentUser.uid)) {
-                await updateDoc(postRef, { dislikes: arrayRemove(currentUser.uid) });
-            } else {
-                await updateDoc(postRef, { dislikes: arrayUnion(currentUser.uid), likes: arrayRemove(currentUser.uid) });
-            }
-        }
-    }
-
-    async function incrementViews(posts) {
-        for (let p of posts) {
-            const postRef = doc(db, 'posts', p.id);
-            await updateDoc(postRef, { views: increment(1) });
-        }
-    }
-
-    async function createPost(channelId) {
-        const input = document.getElementById('newPostInput');
-        const text = input.value.trim();
-        if (!text) return;
-        await addDoc(collection(db, 'posts'), {
-            channelId,
-            text,
-            timestamp: serverTimestamp(),
-            views: 0,
-            likes: [],
-            dislikes: []
-        });
-        input.value = '';
-    }
-
-    async function checkSubscription(channelId) {
-        const subId = `${currentUser.uid}_${channelId}`;
-        const subDoc = await getDoc(doc(db, 'subscriptions', subId));
-        return subDoc.exists();
-    }
-
-    async function toggleSubscription(channelId) {
-        const subId = `${currentUser.uid}_${channelId}`;
-        const subRef = doc(db, 'subscriptions', subId);
-        const channelRef = doc(db, 'channels', channelId);
-        const channelSnap = await getDoc(channelRef);
-        const channel = channelSnap.data();
-        const exists = await checkSubscription(channelId);
-        if (exists) {
-            await deleteDoc(subRef);
-            await updateDoc(channelRef, { subscribers: arrayRemove(currentUser.uid) });
-        } else {
-            await setDoc(subRef, { userId: currentUser.uid, channelId });
-            await updateDoc(channelRef, { subscribers: arrayUnion(currentUser.uid) });
-        }
+        document.getElementById('createNewChannelBtn').onclick = () => {
+            modal.remove();
+            showCreateChannelModal();
+        };
+        document.getElementById('cancelCreateMenu').onclick = () => modal.remove();
     }
 
     function showCreateChannelModal() {
@@ -928,7 +502,8 @@
                 <input id="chanName" placeholder="Название">
                 <textarea id="chanDesc" placeholder="Описание"></textarea>
                 <select id="chanType"><option value="public">Публичный</option><option value="private">Приватный</option></select>
-                <input type="text" id="chanAvatarUrl" placeholder="URL аватарки (опционально)">
+                <label style="display:block; margin-bottom:8px;">Аватар (с устройства)</label>
+                <input type="file" id="chanAvatarFile" accept="image/*">
                 <div style="display:flex; gap:12px; margin-top:16px;">
                     <button id="confirmChan">Создать</button>
                     <button id="cancelChan">Отмена</button>
@@ -940,20 +515,18 @@
             const name = document.getElementById('chanName').value.trim();
             const desc = document.getElementById('chanDesc').value.trim();
             const type = document.getElementById('chanType').value;
-            const avatar = document.getElementById('chanAvatarUrl').value.trim();
+            const file = document.getElementById('chanAvatarFile').files[0];
+            let avatarBase64 = '';
+            if (file) {
+                avatarBase64 = await new Promise(resolve => {
+                    const reader = new FileReader();
+                    reader.onload = e => resolve(e.target.result);
+                    reader.readAsDataURL(file);
+                });
+            }
             if (!name) { alert("Введите название"); return; }
-            await addDoc(collection(db, 'channels'), {
-                name,
-                description: desc,
-                isPrivate: type === 'private',
-                isPublic: type !== 'private',
-                ownerId: currentUser.uid,
-                subscribers: [currentUser.uid],
-                avatar: avatar || '',
-                createdAt: serverTimestamp()
-            });
+            await createChannel(name, desc, type, avatarBase64);
             modal.remove();
-            loadChannels();
         };
         document.getElementById('cancelChan').onclick = () => modal.remove();
     }
@@ -965,35 +538,47 @@
         const container = document.getElementById('profileContent');
         container.innerHTML = `
             <div class="profile-avatar-large" id="profileAvatar" style="background-image: url('${user.avatar || ''}');">${!user.avatar ? user.name.charAt(0) : ''}</div>
+            <button class="fab" id="changeAvatarBtn" style="background:#e2e8f0; color:#1e293b; margin-bottom:8px;">Сменить аватар</button>
             <div class="profile-field"><span>Имя</span><span>${escapeHtml(user.name)}</span></div>
             <div class="profile-field"><span>Email</span><span>${currentUser.email}</span></div>
             <div class="profile-field"><span>Premium</span><span>${user.isPremium ? '💎 Активна' : 'Нет'}</span></div>
-            <button class="fab" id="editProfileBtn">Редактировать</button>
+            <button class="fab" id="editProfileBtn">Редактировать имя</button>
         `;
+        document.getElementById('changeAvatarBtn').onclick = () => {
+            const input = document.createElement('input');
+            input.type = 'file'; input.accept = 'image/*';
+            input.onchange = async (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = async (ev) => {
+                    await updateDoc(doc(db, 'users', currentUser.uid), { avatar: ev.target.result });
+                    loadProfile();
+                };
+                reader.readAsDataURL(file);
+            };
+            input.click();
+        };
         document.getElementById('editProfileBtn').onclick = () => {
             const newName = prompt('Новое имя', user.name);
-            if (newName && newName.trim()) {
-                updateDoc(doc(db, 'users', currentUser.uid), { name: newName.trim() });
-                loadProfile();
-            }
+            if (newName?.trim()) updateDoc(doc(db, 'users', currentUser.uid), { name: newName.trim() }).then(() => loadProfile());
         };
     }
 
-    // ========== АДМИНКА (выдача Premium) ==========
+    // ========== АДМИН-ПАНЕЛЬ (расширенная) ==========
     async function loadAdmin() {
         const usersSnap = await getDocs(collection(db, 'users'));
         const users = usersSnap.docs.map(d => ({ id: d.id, ...d.data() }));
+        const channelsSnap = await getDocs(collection(db, 'channels'));
+        const channels = channelsSnap.docs.length;
+        const messagesSnap = await getDocs(collection(db, 'messages'));
+        const messages = messagesSnap.docs.length;
         const container = document.getElementById('adminContent');
-        container.innerHTML = `<h3 style="padding:16px;">Выдать Premium</h3>${users.map(u => `
-            <div class="list-item">
-                <div class="avatar" style="background-image: url('${u.avatar || ''}');">${!u.avatar ? u.name.charAt(0) : ''}</div>
-                <div class="list-info">
-                    <div class="list-name">${escapeHtml(u.name)}</div>
-                    <div class="list-preview">${u.email}</div>
-                </div>
-                <button class="icon-btn premium-toggle" data-userid="${u.id}" data-premium="${u.isPremium}">${u.isPremium ? '🔴 Отменить' : '🟢 Выдать'}</button>
-            </div>
-        `).join('')}`;
+        container.innerHTML = `
+            <div class="admin-card"><div class="admin-title">📊 Статистика платформы</div><div class="admin-stat"><span>Пользователей</span><span>${users.length}</span></div><div class="admin-stat"><span>Каналов</span><span>${channels}</span></div><div class="admin-stat"><span>Сообщений</span><span>${messages}</span></div></div>
+            <div class="admin-card"><div class="admin-title">👑 Управление премиум-статусом</div>${users.map(u => `<div class="list-item" style="padding:8px 0;"><div class="avatar" style="width:40px;height:40px;background-image:url('${u.avatar || ''}');">${!u.avatar ? u.name.charAt(0) : ''}</div><div class="list-info"><div class="list-name">${escapeHtml(u.name)}</div><div class="list-preview">${u.email}</div></div><button class="premium-toggle" data-userid="${u.id}" data-premium="${u.isPremium}" style="background:#${u.isPremium ? 'ef4444' : '10b981'}; color:white; border:none; padding:6px 12px; border-radius:30px; cursor:pointer;">${u.isPremium ? '🔴 Отменить' : '🟢 Выдать'}</button></div>`).join('')}</div>
+            <div class="admin-card"><div class="admin-title">📢 Управление каналами (только удаление)</div>${(await getDocs(collection(db, 'channels'))).docs.map(doc => `<div class="list-item" style="padding:8px 0;"><div class="avatar" style="width:40px;height:40px;background-image:url('${doc.data().avatar || ''}');">${!doc.data().avatar ? doc.data().name.charAt(0) : ''}</div><div class="list-info"><div class="list-name">${escapeHtml(doc.data().name)}</div><div class="list-preview">${doc.data().ownerId}</div></div><button class="delete-channel" data-id="${doc.id}" style="background:#ef4444; color:white; border:none; padding:6px 12px; border-radius:30px; cursor:pointer;">Удалить</button></div>`).join('')}</div>
+        `;
         document.querySelectorAll('.premium-toggle').forEach(btn => {
             btn.onclick = async () => {
                 const userId = btn.dataset.userid;
@@ -1002,18 +587,25 @@
                 loadAdmin();
             };
         });
+        document.querySelectorAll('.delete-channel').forEach(btn => {
+            btn.onclick = async () => {
+                if (confirm('Удалить канал и все посты?')) {
+                    const channelId = btn.dataset.id;
+                    const posts = await getDocs(query(collection(db, 'posts'), where('channelId', '==', channelId)));
+                    posts.forEach(p => deleteDoc(doc(db, 'posts', p.id)));
+                    await deleteDoc(doc(db, 'channels', channelId));
+                    loadAdmin();
+                    loadChats();
+                }
+            };
+        });
     }
 
     function escapeHtml(str) { return str?.replace(/[&<>]/g, m => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;' }[m])) || ''; }
 
-    // ========== СТАРТ ==========
     onAuthStateChanged(auth, async (user) => {
-        if (user) {
-            currentUser = user;
-            await initApp();
-        } else {
-            showWelcome();
-        }
+        if (user) { currentUser = user; await initApp(); }
+        else showWelcome();
     });
 </script>
 </body>
